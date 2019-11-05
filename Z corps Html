@@ -1,6 +1,6 @@
 <div class="sheet-section-main" style=" position:relative;">
   <div>
-    <img src="opend6.png" height="50" width="50" style="float:left" />
+    <img src="Zcorsp.png" height="50" width="50" style="float:left" />
     <h1 style="text-align: Center;">D6 Fantasy</h1>
   </div>
   <br>
@@ -11,7 +11,7 @@
         <label>Character Name:<input class="sheet-right sheet-shorttext" type="text" name="attr_charactername" style="width:65%;"/></label>
         <label>Player Name:<input class="sheet-right sheet-shorttext" type="text" name="attr_playername" style="width:70%;"/></label>
         <label>Occupation:<input class="sheet-right sheet-shorttext" type="text" name="attr_occupation" style="width:75%;"/></label>
-        <label>Race:<input class="sheet-right sheet-shorttext" style="width:80%;" type="text" name="attr_species"/></label>
+        <label>Carrière:<input class="sheet-right sheet-shorttext" style="width:80%;" type="text" name="attr_species"/></label>
         <table style="margin-top:-10px; margin-left:-10px;">
           <tr><td>
             <label>Gender:<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_gender"/></label></td><td>
@@ -28,99 +28,86 @@
   </div>
   <div name="attributes" class="sheet-section">
     <div class="sheet-3colrow">
-		<div name="Agility-Coordination" class="sheet-col">
-			<div name="Agility" class="sheet-bold sheet-border">
-        <button type='roll' value='/roll (@{agilitydice} - 1)d6 + 1d6! + @{agilitypip}' >Agility</button>
+		<div name="Agilite-Adresse" class="sheet-col">
+			<div name="Agilite" class="sheet-bold sheet-border">
+        <button type='roll' value='/roll (@{agilitedice} - 1)d6 + 1d6! + @{agilitepip}' >Agilite</button>
         <div style="float:right;">
-          <input type="number" name="attr_agilitydice" class="sheet-smallnumber sheet-shortnumber"  min="1" value="3"/>D+<input type="number" name="attr_agilitypip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+          <input type="number" name="attr_agilitedice" class="sheet-smallnumber sheet-shortnumber"  min="1" value="3"/>D+<input type="number" name="attr_agilitepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
         </div>
         <fieldset class="repeating_agilskills">
-          <button  type="roll" value="/r (@{addagilitydice} - 1)d6 + 1d6! + @{addagilitypip}"></button>
+          <button  type="roll" value="/r (@{addagilitedice} - 1)d6 + 1d6! + @{addagilitepip}"></button>
           <input class="sheet-skilltext" type="text" name="attr_agilskillname"/>
           <div class="sheet-right">
-            <input type="number" name="attr_addagilitydice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_addagilitypip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+            <input type="number" name="attr_addagilitedice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_addagilitepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
           </div>
         </fieldset>
       </div>
-  		<div name="Coordination" class="sheet-bold sheet-border">
-        <button type='roll' class="astext" value='/roll (@{coordination} - 1)d6 + 1d6! + @{coordpip}' >Coordination</button>
+  		<div name="Adresse" class="sheet-bold sheet-border">
+        <button type='roll' class="astext" value='/roll (@{adresse} - 1)d6 + 1d6! + @{adressepip}' >adresse</button>
         <div style="float:right">
-          <input type="number" name="attr_coordination" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_coordpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+          <input type="number" name="attr_adresse" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_adressepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
         </div>
-        <fieldset class="repeating_coordskills">
-          <button  type="roll" value="/r (@{coordskilldice} - 1)d6 + 1d6! + @{coordskillpip}"></button>
-          <input class="sheet-skilltext" type="text" name="attr_coordskillname"/>
+        <fieldset class="repeating_adresseskills">
+          <button  type="roll" value="/r (@{adresseskilldice} - 1)d6 + 1d6! + @{adresseskillpip}"></button>
+          <input class="sheet-skilltext" type="text" name="attr_adresseskillname"/>
           <div class="sheet-right">
-            <input type="number" name="attr_coordskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_coordskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+            <input type="number" name="attr_adresseskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_adresseskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
           </div>
         </fieldset>
       </div>
 		</div>
-		<div name="Physique-Charisma-Intellect" class="sheet-col">
-			<div name="Physique" class="sheet-bold sheet-border">
-        <button type='roll' class="astext" value='/roll (@{physique} - 1)d6 + 1d6! + @{physpip}' >Physique</button>
+		<div name="Puissance-Connaissances" class="sheet-col">
+			<div name="Puissance" class="sheet-bold sheet-border">
+        <button type='roll' class="astext" value='/roll (@{Puissance} - 1)d6 + 1d6! + @{puissancepip}' >Puissance</button>
         <div style="float:right;">
-          <input type="number" name="attr_physique" class="sheet-smallnumber sheet-shortnumber"  min="1" value="3"/>D+<input type="number" name="attr_physpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+          <input type="number" name="attr_puissance" class="sheet-smallnumber sheet-shortnumber"  min="1" value="3"/>D+<input type="number" name="attr_puissancepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
         </div>
-        <fieldset class="repeating_physskills">
-          <button  type="roll" value="/r (@{physskilldice} - 1)d6 + 1d6! + @{physskillpip}"></button>
-          <input class="sheet-skilltext" type="text" name="attr_physskillname"/>
+        <fieldset class="repeating_puiskills">
+          <button  type="roll" value="/r (@{puissancekilldice} - 1)d6 + 1d6! + @{puiskillpip}"></button>
+          <input class="sheet-skilltext" type="text" name="attr_puiskillname"/>
           <div class="sheet-right">
-            <input type="number" name="attr_physskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_physskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+            <input type="number" name="attr_puissancekilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_puissanceskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
           </div>
         </fieldset>
       </div>
-      <div name="Charisma" class="sheet-bold sheet-border">
-        <button type='roll' class="astext" value='/roll (@{charisma} - 1)d6 + 1d6! + @{charpip}' >Charisma</button>
+      <div name="Connaissances" class="sheet-bold sheet-border">
+        <button type='roll' class="astext" value='/roll (@{connaissances} - 1)d6 + 1d6! + @{conpip}' >Connaissances</button>
         <div style="float:right;">
-          <input type="number" name="attr_charisma" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_charpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+          <input type="number" name="attr_connaissances" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_connaissancespip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
         </div>
-        <fieldset class="repeating_charskills">
-          <button  type="roll" value="/r (@{charskilldice} - 1)d6 + 1d6! + @{charskillpip}"></button>
-          <input class="sheet-skilltext" type="text" name="attr_charskillname"/>
+        <fieldset class="repeating_conskills">
+          <button  type="roll" value="/r (@{connaissancesskilldice} - 1)d6 + 1d6! + @{connaissancesskillpip}"></button>
+          <input class="sheet-skilltext" type="text" name="attr_conskillname"/>
           <div class="sheet-right">
-            <input type="number" name="attr_charskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_charskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
-          </div>
-        </fieldset>
-      </div>
-      <div name="Intellect" class="sheet-bold sheet-border">
-        <button  type='roll' value='/roll (@{intellect} - 1)d6 + 1d6! + @{intellectpip}' >Intellect</button>
-        <div style="float:right;">
-          <input type="number" name="attr_intellect" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_intellectpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
-        </div>
-        <fieldset class="repeating_intellectskills">
-          <button  type="roll" value="/r (@{intellectskilldice} - 1)d6 + 1d6! + @{intellectskillpip}"></button>
-          <input class="sheet-skilltext" type="text" name="attr_intellectskillname"/>
-          <div class="sheet-right">
-            <input type="number" name="attr_intellectskilldice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0"/>D+<input type="number" name="attr_intellectskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+            <input type="number" name="attr_connaissancesskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_connaissancesskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
           </div>
         </fieldset>
       </div>
 		</div>
-		<div name="Acumen-Extranormal" class="sheet-col">
-		  <div name="Acumen" class="sheet-bold sheet-border">
-        <button type='roll' class="astext" value='/roll (@{acumen} - 1)d6 + 1d6! + @{acumenpip}' >Acumen</button>
+		<div name="Perception-Extranormal" class="sheet-col">
+		  <div name="Perception" class="sheet-bold sheet-border">
+        <button type='roll' class="astext" value='/roll (@{perception} - 1)d6 + 1d6! + @{perceptionpip}' >perception</button>
         <div style="float:right;">
-          <input type="number" name="attr_acumen" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_acumenpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+          <input type="number" name="attr_perception" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_perceptionpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
         </div>
-        <fieldset class="repeating_acumenskills">
-          <button  type="roll" value="/r (@{acumenskilldice} - 1)d6 + 1d6! + @{acumenskillpip}"></button>
-          <input class="sheet-skilltext" type="text" name="attr_acumenskillname"/>
+        <fieldset class="repeating_perceptionskills">
+          <button  type="roll" value="/r (@{perceptionskilldice} - 1)d6 + 1d6! + @{perceptionskillpip}"></button>
+          <input class="sheet-skilltext" type="text" name="attr_perceptionskillname"/>
           <div class="sheet-right">
-            <input type="number" name="attr_acumenskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_acumenskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+            <input type="number" name="attr_perceptionskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_perceptionskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
           </div>
         </fieldset>
       </div>
-      <div name="Extranormal" class="sheet-bold sheet-border">
-        <button type='roll' value='/roll (@{extranormal} - 1)d6 + 1d6! + @{extranormalpip}' >Extranormal </button>
+      <div name="Presence" class="sheet-bold sheet-border">
+        <button type='roll' value='/roll (@{presence} - 1)d6 + 1d6! + @{presencepip}' >Presence</button>
         <div style="float:right;">
-          <input type="number" name="attr_extranormal" class="sheet-smallnumber sheet-shortnumber" min="0" value="0"/>D+<input type="number" name="attr_extranormalpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+          <input type="number" name="attr_extranormal" class="sheet-smallnumber sheet-shortnumber" min="0" value="0"/>D+<input type="number" name="attr_presencepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
         </div>
-        <fieldset class="repeating_extranormalskills">
-          <button  type="roll" value="/r (@{extranormalskilldice} - 1)d6 + 1d6! + @{extranormalskillpip}"></button>
-            <input class="sheet-skilltext" type="text" name="attr_extranormalskillname"/>
+        <fieldset class="repeating_presenceskills">
+          <button  type="roll" value="/r (@{presenceskilldice} - 1)d6 + 1d6! + @{presenceskillpip}"></button>
+            <input class="sheet-skilltext" type="text" name="attr_presenceskillname"/>
             <div class="sheet-right">
-              <input type="number" name="attr_extranormalskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_extranormalskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0"/>
+              <input type="number" name="attr_presenceskilldice" class="sheet-smallnumber sheet-shortnumber" min="1" value="3"/>D+<input type="number" name="attr_presenceskillpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="6" value="0"/>
           </div>
         </fieldset>
       </div>
